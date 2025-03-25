@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MND - Matthew El Naggar Drums</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.36/Tone.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vexflow/1.2.93/vexflow-min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>MND</h1>
+        <p>Matthew El Naggar Drums</p>
+    </header>
+    <main>
+        <div class="upload-container">
+            <input type="file" id="fileInput" accept="audio/mp3">
+            <select id="notationType">
+                <option value="drums">Drums Notation</option>
+                <option value="piano">Piano Notation</option>
+            </select>
+            <select id="pianoType" class="hidden">
+                <option value="normal">Normal</option>
+                <option value="cgf">C G F</option>
+            </select>
+            <button id="generateButton">Generate Notation</button>
+        </div>
+        <div id="notationOutput"></div>
+        <button id="downloadPDF" class="hidden">Download PDF</button>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
